@@ -107,6 +107,13 @@ a.secondary {
 .footer img {
   flex-shrink: 0;
 }
+.nextjs-toast::part(contenedor) {
+  background-color: red;
+}
+.nextjs-toast {
+  display: none !important;
+}
+
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
