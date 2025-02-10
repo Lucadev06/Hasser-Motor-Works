@@ -29,10 +29,4 @@
     
 
 }
-nextjs-toast::part(contenedor) {
-    background-color: red;
-  }
-  .nextjs-toast {
-    display: none !important;
-}
 

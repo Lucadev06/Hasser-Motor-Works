@@ -166,9 +166,21 @@ export default function Home() {
             <ul >
               {servicios.map((servicio, index) => (
                 <li key={index} style={{ marginBottom: "2rem" }}className="lista-servicios">
-                  <Button variant="text" color="primary" className="botones-item-main" onClick={() => {handleImageBody(servicio.id), handleScrollToElement("contenedor-imagenes")}}>
-                    {servicio.titulo}
-                  </Button>
+                <Button 
+                  variant="text" color="primary"
+                  sx={{
+                    color: "black",
+                    fontSize: "2rem",
+                    marginRight: "3rem"
+                  }}
+                  onClick={() => {
+                    handleImageBody(servicio.id);
+                    handleScrollToElement("contenedor-imagenes");
+                  }}
+                >
+                  {servicio.titulo}
+                </Button>
+
                   <Typography variant="body1" sx={{ color: "#333" }}>
                     {servicio.descripcion}
                   </Typography>
@@ -224,9 +236,22 @@ export default function Home() {
           <ul >
             {servicios.map((servicio, index) => (
               <li key={index} style={{ marginBottom: "2rem" }}className="lista-servicios">
-                <Button variant="text" color="primary" className="botones-item-main" onClick={() => {handleImageBody(servicio.id), handleScrollToElement("contenedor-imagenes")}}>
-                  {servicio.titulo}
-                </Button>
+              <Button 
+                variant="text" 
+                color="primary"
+                sx={{
+                  color: "black",
+                  fontSize: "2rem",
+                  marginRight: "3rem"
+                }}
+                onClick={() => {
+                  handleImageBody(servicio.id);
+                  handleScrollToElement("contenedor-imagenes");
+                }}
+              >
+                {servicio.titulo}
+              </Button>
+
                 <Typography variant="body1" sx={{ color: "#333" }}>
                   {servicio.descripcion}
                 </Typography>
