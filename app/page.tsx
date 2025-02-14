@@ -18,45 +18,49 @@ export default function Home() {
     document
         .querySelectorAll(".nextjs-toast, .nextjs-static-indicator-toast-wrapper")
         .forEach((el) => el.remove());
-}, 100);
+    }, 100);
 
+const isMenuMobile = useMediaQuery("(max-width: 900px)"); // Definir el ancho límite
 
-  // Imagenes del head
-  const imagesHead = [
-    "images/portada-02.jpeg",
-    "/images/portada-01.jpeg",
-    "/images/inyeccion-12.jpeg",
-    "/images/restauracion-02.jpeg",
-    "/images/swap-03.jpeg",
-  ];
-  const placeholderImage = "/images/foto-inyecciones-02.svg"; // Imagen de respaldo
+// Definir imágenes para cada tipo de dispositivo
+const imagesDesktop = [
+  "/images/swap-03.jpeg",
+  "/images/inyeccion-12.jpeg",
+  "/images/portada-04.jpeg",
+  "/images/restauracion-02.jpeg",
+  "/images/portada-06.jpeg",
+];
 
-  const [currentImage, setCurrentImage] = useState(placeholderImage);
-  const [imagesLoaded, setImagesLoaded] = useState<string[]>([]);
+const imagesMobile = [
+  "images/portada-02.jpeg",
+  "/images/portada-01.jpeg",
+  "/images/portada-03.jpeg",
+  "/images/inyeccion-12.jpeg",
+  "/images/swap-03.jpeg",
+];
 
-  useEffect(() => {
-    // Preload todas las imágenes
-    PreloadImages(imagesHead).then(() => setImagesLoaded(imagesHead));
-  }, []);
+// Estado para imágenes actuales
+const [imagesHead, setImagesHead] = useState<string[]>(isMenuMobile ? imagesMobile : imagesDesktop);
+const [imagesLoaded, setImagesLoaded] = useState<string[]>([]);
+const placeholderImage = "/images/portada-03.jpeg"; // Imagen de respaldo
+const [currentImage, setCurrentImage] = useState(placeholderImage);
 
-  useEffect(() => {
-    if (imagesLoaded.length > 0) {
-      let index = 0;
+// Efecto para actualizar imágenes al cambiar de tamaño
+useEffect(() => {
+  setImagesHead(isMenuMobile ? imagesMobile : imagesDesktop);
+}, [isMenuMobile]); // Se ejecuta cada vez que `isMobile` cambia
 
-      const interval = setInterval(() => {
-        index = (index + 1) % imagesHead.length;
-        setCurrentImage(imagesLoaded[index]);
-      }, 5000); // Cambia la imagen cada 5 segundos
+// Preload de imágenes
+useEffect(() => {
+  PreloadImages(imagesHead).then(() => setImagesLoaded(imagesHead));
+}, [imagesHead]); // Se ejecuta cada vez que `imagesHead` cambia
 
-      return () => clearInterval(interval);
-    }
-  }, [imagesLoaded]);
 
   // imagenes del main
   const imageBody = [
     "/images/inyeccion-11.jpeg",
-    "/images/modificacion-02.jpeg",
-    "/images/restauracion-01.jpeg",
+    "/images/modificacion-11.jpeg",
+    "/images/restauracion-07.jpeg",
     "/images/swap-06.jpeg",
     "/images/importacion-01.jpeg"
   ]
@@ -207,7 +211,7 @@ export default function Home() {
             src={imageMain}
             alt="Servicio"
             width={700}
-            height={500}
+            height={550}
             style={{
               borderRadius: "2rem",
               objectFit: "cover",
