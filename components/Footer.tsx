@@ -18,7 +18,7 @@ export default function Footer() {
       backgroundColor: "#f5f5f5",
       borderRadius: "1rem",
       boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.2)", // Sombra sutil para destacar
-      marginTop: "2rem",
+      marginTop: "1rem", // Espacio entre el contenido y el footer
     }}
   >
     <Box
