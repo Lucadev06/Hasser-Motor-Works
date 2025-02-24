@@ -32,8 +32,6 @@ export default function Header() {
         marginLargeValueMenu = "5%";
     }
     
-
-
     // Puntos de quiebre personalizados
     //const isLargeScreen = useMediaQuery('(min-width: 1200px)');
     const isSmallcreen = useMediaQuery('(max-width: 999px) and (min-width: 320px)');   
@@ -200,16 +198,6 @@ export default function Header() {
                                 >
                                     Swaps
                                 </Button>
-
-                                <Button
-                                    variant="text"
-                                    sx={{
-                                    color: "white",
-                                    }}
-                                    onClick={() => router.push("./importaciones")}
-                                >
-                                    Importaciones
-                    </Button>
                     
                     
                 </Box>
@@ -275,15 +263,6 @@ export default function Header() {
                         Swaps
                     </Button>
 
-                    <Button
-                        variant="text"
-                        sx={{
-                        color: "white",
-                        }}
-                        onClick={() => router.push("./importaciones")}
-                    >
-                        Importaciones
-                    </Button>
                 </Box>
             )}
 

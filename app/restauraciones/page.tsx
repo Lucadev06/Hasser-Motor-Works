@@ -6,11 +6,9 @@ import ReactImageGallery from '@/components/ReactImageGallery'
 
 export default function page() {
     const inyeccionesImages = [
-      { src:"/images/restauracion-07.jpeg", text: "Restauracion 190E" },   
       { src: "/images/restauracion-05.jpeg", text: "Puesta en valor Motor m103" },
       { src:"/images/restauracion-04.jpeg", text: "Restauracion completa W201" },
-      { src: "/images/restauracion-06.jpeg", text: "Restauracion parlantes W164"},
-      { src:"/images/restauracion-01.jpeg", text: "Pintura completa 190E" },   
+      { src: "/images/restauracion-06.jpeg", text: "Restauracion parlantes W164"}, 
       { src:"/images/restauracion-08.jpeg", text: "Restauracion tapa de valvulas de ferrari y mercedes"},
     ];
 

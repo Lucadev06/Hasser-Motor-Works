@@ -19,9 +19,9 @@ export const servicios = [
       descripcion: "¿Tenés una idea del proyecto que querés hacer realidad? Hacemos tu sueño realidad...",
       id: 4
     },
-    { 
+   /* { 
       titulo: "IMPORTACIONES", 
       descripcion: "¿Estás cansado de las trabas para importar accesorios? Trae tus repuestos con la seguridad de que llegarán...",
       id: 5
-    },
+    },*/
 ];

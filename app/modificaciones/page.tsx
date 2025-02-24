@@ -9,9 +9,7 @@ export default function page() {
         { src:"/images/modificacion-04.jpeg", text: "TAPAS TRABAJADAS M112" },
         { src:"/images/modificacion-11.jpeg", text: "Modificación completa interior w124" },
         { src:"/images/modificacion-12.jpeg", text: "REPRO W211" },
-        { src:"/images/modificacion-09.jpeg", text: "Volanre w201"},
         { src:"/images/modificacion-10.jpeg", text: "compresora amg SLK32" },
-        { src:"/images/modificacion-13.jpeg", text: "Mejora de frenos" },   
     ];
 
     return (
