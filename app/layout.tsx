@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,6 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <meta name="viewport" content="width=device-width, initial-scale"/>
+      <meta name="description" content="Hasser Motor Works" />
+      <meta name="author" content="Luca Simonazzi"/>
+      <meta name="keywords" content="INYECCIONES, MODIFICACIONES, SWAPS, RESTAURACIONES, auto"/>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />

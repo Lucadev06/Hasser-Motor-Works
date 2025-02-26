@@ -11,12 +11,6 @@ import Footer from "@/components/Footer";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  setTimeout(() => {
-    document
-      .querySelectorAll(".nextjs-toast, .nextjs-static-indicator-toast-wrapper")
-      .forEach((el) => el.remove());
-  }, 100);
-
   const isMenuMobile = useMediaQuery("(max-width: 900px)"); // Definir el ancho límite
 
   // Definir imágenes para cada tipo de dispositivo

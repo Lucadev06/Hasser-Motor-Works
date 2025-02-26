@@ -16,31 +16,7 @@ interface ReactImageGalleryProps {
 }
 
 const ReactImageGallery: React.FC<ReactImageGalleryProps> = ({ images }) => {
-    const [open, setOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
-
-    // Bloquea el scroll de la página cuando el modal está abierto
-    useEffect(() => {
-        if (open) {
-            document.documentElement.style.overflow = "hidden"; // Evita el scroll en la página
-        } else {
-            document.documentElement.style.overflow = ""; // Restaura el scroll al cerrar el modal
-        }
-        return () => {
-            document.documentElement.style.overflow = ""; // Asegura que el scroll se restaura si el componente se desmonta
-        };
-    }, [open]);
-
-    const openDialog = (image: ImageData) => {
-        setSelectedImage(image);
-        setOpen(true);
-    };
-
-    const closeDialog = () => {
-        setOpen(false);
-        setSelectedImage(null);
-    };
-
+  
     return (
         <Box sx={{ padding: "2rem" }}>
             {/* Galería de imágenes */}
@@ -77,59 +53,7 @@ const ReactImageGallery: React.FC<ReactImageGalleryProps> = ({ images }) => {
                 ))}
             </Box>
 
-            {/* Modal con scroll interno y sin movimiento en la página */}
-                {/*<Dialog
-                    open={open}
-                    onClose={closeDialog}
-                    maxWidth="md"
-                    sx={{
-                        "& .MuiPaper-root": {
-                            width: "600px",
-                            maxHeight: "90vh", // Altura máxima del modal
-                            overflowY: "auto", // Permitir scroll solo dentro del modal
-                        },
-                    }}
-                >
-                    <Box
-                        sx={{
-                            position: "relative",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            padding: "1rem",
-                            backgroundColor: "white",
-                            borderRadius: "8px",
-                        }}
-                    >
-                       
-                        <IconButton
-                            onClick={closeDialog}
-                            sx={{
-                                position: "absolute",
-                                top: "-8px",
-                                right: "0px",
-                            }}
-                        >
-                            <CloseIcon />
-                        </IconButton>
-
-                      
-                        {selectedImage && (
-                            <>
-                                <Image
-                                    src={selectedImage.src}
-                                    alt="Imagen Seleccionada"
-                                    width={500}
-                                    height={400}
-                                    style={{ maxWidth: "100%", height: "auto", borderRadius: "1rem", marginTop: "1rem" }}
-                                />
-                                <Typography variant="h6" sx={{ marginTop: "1rem", textAlign: "center" }}>
-                                    {selectedImage.text}
-                                </Typography>
-                            </>
-                        )}
-                    </Box>
-                </Dialog>*/}
+          
         </Box>
     );
 };
