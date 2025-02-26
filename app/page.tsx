@@ -23,9 +23,9 @@ export default function Home() {
   ];
 
   const imagesMobile = [
+    "/images/portada-03.jpeg",
     "images/portada-02.jpeg",
     "/images/portada-01.jpeg",
-    "/images/portada-03.jpeg",
     "/images/inyeccion-08.jpeg",
     "/images/swap-03.jpeg",
   ];

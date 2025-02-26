@@ -6,12 +6,12 @@ import ReactImageGallery from '@/components/ReactImageGallery'
 
 export default function page() {
     const inyeccionesImages = [
-      { src: "/images/restauracion-05.jpeg", text: "Puesta en valor Motor M103" },
-      { src:"/images/restauracion-04.jpeg", text: "Restauracion completa interior W201" },
-      { src: "/images/restauracion-06.jpeg", text: "Restauracion parlantes W163"}, 
-      { src:"/images/restauracion-08.jpeg", text: "Restauracion pintura de tapas"},
+        { src: "/images/restauracion-05.jpeg", text: "Puesta en valor Motor M103" },
+        { src: "/images/restauracion-04.jpeg", text: "Restauración completa interior W201" },
+        { src: "/images/restauracion-06.jpeg", text: "Restauración parlantes W163" }, 
+        { src: "/images/restauracion-08.jpeg", text: "Restauración pintura de tapas" },
     ];
-
+    
     return (
         <>
             <Box sx={{backgroundColor: "black"}}><Header/></Box>
