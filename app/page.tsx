@@ -23,8 +23,8 @@ export default function Home() {
   ];
 
   const imagesMobile = [
-    "/images/portada-03.jpeg",
     "images/portada-02.jpeg",
+    "/images/portada-03.jpeg",
     "/images/portada-01.jpeg",
     "/images/inyeccion-08.jpeg",
     "/images/swap-03.jpeg",
@@ -35,8 +35,7 @@ export default function Home() {
     isMenuMobile ? imagesMobile : imagesDesktop
   );
   const [imagesLoaded, setImagesLoaded] = useState<string[]>([]);
-  const placeholderImage = "/images/portada-03.jpeg"; // Imagen de respaldo
-  const [currentImage, setCurrentImage] = useState(placeholderImage);
+ 
 
   // Efecto para actualizar imágenes al cambiar de tamaño
   useEffect(() => {
