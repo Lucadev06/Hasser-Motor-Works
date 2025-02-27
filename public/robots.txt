@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hassermotorworks.com
+
+# Sitemaps
+Sitemap: https://hassermotorworks.com/sitemap.xml
