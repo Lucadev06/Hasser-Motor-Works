@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <meta name="viewport" content="width=device-width, initial-scale"/>
-      <meta name="description" content="Hasser Motor Works" />
+      <meta name="description" content="Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos." />
       <meta name="author" content="Luca Simonazzi"/>
       <meta name="keywords" content="INYECCIONES, MODIFICACIONES, SWAPS, RESTAURACIONES, auto"/>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
