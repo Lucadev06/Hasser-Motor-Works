@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://hassermotorworks.com', // Tu dominio principal
-  generateRobotsTxt: true, // Genera robots.txt automáticamente
+  siteUrl: 'https://hassermotorworks.com', 
+  generateRobotsTxt: true,
   additionalPaths: async (config) => [
     {
       loc: '/favicon.ico',
