@@ -1,11 +1,17 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://hassermotorworks.com', 
+  siteUrl: 'https://hassermotorworks.com',
   generateRobotsTxt: true,
-  additionalPaths: async (config) => [
-    {
-      loc: '/favicon.ico',
-      lastmod: new Date().toISOString(),
-    },
-  ],
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+      {
+        userAgent: '*',
+        disallow: '/hasser-motor-works.netlify.app/',
+      },
+    ],
+  },
 };
