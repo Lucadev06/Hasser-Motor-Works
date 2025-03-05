@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import '@fontsource/roboto/300.css';
@@ -5,25 +6,15 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {/* ✅ Título del sitio */}
+      <Head>
+        {/* ✅ Nombre correcto en el título */}
         <title>Hasser Motor Works</title>
 
         {/* ✅ Meta descripción */}
         <meta name="description" content="Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos." />
-
-        {/* ✅ Meta keywords */}
-        <meta name="keywords" content="INYECCIONES, MODIFICACIONES, SWAPS, RESTAURACIONES, auto" />
-
-        {/* ✅ Autor */}
-        <meta name="author" content="Luca Simonazzi" />
 
         {/* ✅ Open Graph (para redes sociales) */}
         <meta property="og:title" content="Hasser Motor Works - Inyecciones, Modificaciones, Restauraciones y Swaps"/>
@@ -33,7 +24,7 @@ export default function RootLayout({
         <meta property="og:image" content="https://hassermotorworks.com/images/og-image.jpg"/>
         <meta property="og:type" content="website" />
 
-        {/* ✅ Twitter Cards (para compartir en Twitter/X) */}
+        {/* ✅ Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="Hasser Motor Works - Inyecciones, Modificaciones, Restauraciones y Swaps"/>
         <meta name="twitter:description" content="Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos."/>
@@ -45,10 +36,11 @@ export default function RootLayout({
         {/* ✅ Apple Touch Icon */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-        {/* ✅ Viewport para responsive */}
+        {/* ✅ Viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+      </Head>
       <body>
+        <Navbar />
         <main>{children}</main>
       </body>
     </html>
