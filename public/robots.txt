@@ -1,5 +1,3 @@
 User-agent: *
-Allow: /
-
-# Sitemaps
-Sitemap: https://hassermotorworks.com/sitemap.xml
+Disallow: / 
+Allow: https://hassermotorworks.com/
