@@ -10,13 +10,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <Head>
-        {/* ✅ Nombre correcto en el título */}
+        {/*  Nombre correcto en el título */}
         <title>Hasser Motor Works</title>
 
-        {/* ✅ Meta descripción */}
+        {/*  Meta descripción */}
         <meta name="description" content="Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos." />
 
-        {/* ✅ Open Graph (para redes sociales) */}
+        {/*  Open Graph (para redes sociales) */}
         <meta property="og:title" content="Hasser Motor Works - Inyecciones, Modificaciones, Restauraciones y Swaps"/>
         <meta property="og:description" content="Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos." />
         <meta property="og:url" content="https://hassermotorworks.com"/>
@@ -24,19 +24,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:image" content="https://hassermotorworks.com/images/og-image.jpg"/>
         <meta property="og:type" content="website" />
 
-        {/* ✅ Twitter Cards */}
+        {/*  Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="Hasser Motor Works - Inyecciones, Modificaciones, Restauraciones y Swaps"/>
         <meta name="twitter:description" content="Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos."/>
         <meta name="twitter:image" content="https://hassermotorworks.com/images/og-image.jpg"/>
 
-        {/* ✅ Favicon */}
+        {/*  Favicon */}
         <link rel="icon" href="/favicon.ico" />
 
-        {/* ✅ Apple Touch Icon */}
+        {/*  Canonical para evitar problemas de indexación */}
+        <link rel="canonical" href="https://hassermotorworks.com" />
+
+
+        {/*  Apple Touch Icon */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-        {/* ✅ Viewport */}
+        {/*  Viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body>
