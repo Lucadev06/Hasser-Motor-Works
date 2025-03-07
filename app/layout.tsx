@@ -8,8 +8,8 @@ export const metadata = {
   title: "Hasser Motor Works",
   description: "Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos.",
   openGraph: {
-    title: "Hasser Motor Works - Inyecciones, Modificaciones, Restauraciones y Swaps",
-    description: "Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos.",
+    title: "Hasser Motor Works",
+    description: "Especialistas en inyecciones, modificaciones y swaps.",
     url: "https://hassermotorworks.com",
     siteName: "Hasser Motor Works",
     images: [
@@ -24,16 +24,29 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hasser Motor Works - Inyecciones, Modificaciones, Restauraciones y Swaps",
-    description: "Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos.",
+    title: "Hasser Motor Works",
+    description: "Especialistas en inyecciones, modificaciones y swaps.",
     images: ["https://hassermotorworks.com/images/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://hassermotorworks.com",
   },
 };
 
-// ⬇️ Asegúrate de que `RootLayout` exporta correctamente el componente
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es">  
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Hasser Motor Works",
+            "url": "https://hassermotorworks.com"
+          }
+        ` }} />
+      </head>
+
       <body>{children}</body>
     </html>
   );
