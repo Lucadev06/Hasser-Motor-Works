@@ -45,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "url": "https://hassermotorworks.com"
           }
         ` }} />
+        <title>Hasser Motor Works</title>
       </head>
 
       <body>{children}</body>
