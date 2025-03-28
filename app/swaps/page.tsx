@@ -3,7 +3,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'    
 import { Box, Divider, Typography } from '@mui/material'
 import Image from 'next/image'
-import ReactImageGallery from "@/components/ReactImageGallery";
+import ImageGallery from "@/components/ImagesGallery";
 
 
 export default function Page() {
@@ -29,7 +29,7 @@ export default function Page() {
             >
                 <Typography variant="h4">SWAPS</Typography>
             </Box>
-            <ReactImageGallery images={swapsImages} />
+            <ImageGallery images={swapsImages} />
             <Footer />
         </>
     )

@@ -12,7 +12,6 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const isMenuMobile = useMediaQuery("(max-width: 900px)"); // Definir el ancho límite
-
   // Definir imágenes para cada tipo de dispositivo
   const imagesDesktop = [
     "/images/swap-03.jpeg",
@@ -47,13 +46,8 @@ export default function Home() {
     PreloadImages(imagesHead).then(() => setImagesLoaded(imagesHead));
   }, [imagesHead]); // Se ejecuta cada vez que `imagesHead` cambia
 
- 
-
-
-
   const isMobile = useMediaQuery("(max-width: 900px)");
  
-
   const router = useRouter();
   const handleRedirectSection = (titulo: string) => {
     const rutas = {
@@ -63,7 +57,7 @@ export default function Home() {
       swaps: "/swaps",
     };
 
-    const ruta = rutas[titulo.toLowerCase() as keyof typeof rutas]; // TypeScript entiende que es una clave válida
+    const ruta = rutas[titulo.toLowerCase() as keyof typeof rutas]; 
 
     if (ruta) {
       router.push(ruta);

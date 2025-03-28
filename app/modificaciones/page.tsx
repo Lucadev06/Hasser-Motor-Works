@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '@/components/Header'
 import { Box, Typography } from '@mui/material'
 import Footer from '@/components/Footer'
-import ReactImageGallery from '@/components/ReactImageGallery'
+import ReactImageGallery from '@/components/ImagesGallery'
 
 export default function page() {
     const modificacionesImages = [
