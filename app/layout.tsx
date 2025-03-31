@@ -1,12 +1,12 @@
-
 import "./globals.css";
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 export const metadata = {
   title: "Hasser Motor Works",
-  description: "Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos.",
+  description:
+    "Especialistas en inyecciones, modificaciones y swaps. Hasser Motor Works ofrece soluciones personalizadas para autos clásicos y modernos.",
   openGraph: {
     title: "Hasser Motor Works",
     description: "Especialistas en inyecciones, modificaciones y swaps.",
@@ -33,18 +33,28 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="es">  
+    <html lang="es">
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Hasser Motor Works",
-            "url": "https://hassermotorworks.com"
-          }
-        ` }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+                    {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Hasser Motor Works",
+          "alternateName": ["HMW", "hassermotorworks.com"],
+          "url": "https://hassermotorworks.com"
+        }
+      `,
+            }}
+          />
         <title>Hasser Motor Works</title>
       </head>
 
