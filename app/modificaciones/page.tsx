@@ -5,6 +5,10 @@ import Footer from '@/components/Footer'
 import ReactImageGallery from '@/components/ImagesGallery'
 
 export default function page() {
+
+    // todas las pages podrian estar ento de una carpeta page, dentro de app
+
+    // esta constante podria estar en una carpeta common, dentro de un archivo ej getImages.js y traerlas de ahi.
     const modificacionesImages = [
         { src: "/images/modificacion-04.jpeg", text: "Conductos de admisión M112" },
         { src: "/images/modificacion-11.jpeg", text: "Modificación completa interior W124" },

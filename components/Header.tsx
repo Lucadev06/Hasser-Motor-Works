@@ -19,6 +19,28 @@ export default function Header() {
     const isExtraSmallMenu = useMediaQuery('(max-width: 799px) and (min-width: 550px)');
     const isExtraExtraSmallMenu = useMediaQuery('(max-width: 549px) and (min-width: 450px)');
     const isExtraExtraExtraSmallMenu = useMediaQuery('(max-width: 449px) and (min-width: 320px)');
+
+    /*esto se puede armar asi:
+    const mediaQueryRules = [
+  { query: '(max-width: 999px) and (min-width: 850px)', value: '33%' },
+  { query: '(max-width: 849px) and (min-width: 700px)', value: '30%' },
+  { query: '(max-width: 799px) and (min-width: 550px)', value: '24%' },
+  { query: '(max-width: 549px) and (min-width: 450px)', value: '14%' },
+  { query: '(max-width: 449px) and (min-width: 320px)', value: '5%' },
+];
+tambien deberia llevarse a otro archivo de constantes
+*/ 
+
+/* y usarlo asi:
+const marginLargeValueMenu = useMemo(() => {
+  for (const rule of mediaQueryRules) {
+    if (useMediaQuery(rule.query)) return rule.value;
+  }
+  return undefined;
+}, mediaQueryRules.map(rule => useMediaQuery(rule.query)));
+
+te ahorras todo el if y queda mas prolijo
+*/
     let marginLargeValueMenu;
     if (isLargeMenu) {
         marginLargeValueMenu = "33%";
@@ -42,7 +64,12 @@ export default function Header() {
     }, []);
     if (!isClient) return null;
     return (
-        
+        /*aca podrias dividir en 3 componentes distintos y llamarlos aca:
+        <comopnente1 />
+        {isSmallcreen ? (
+          <componente2/> :
+          <componente3/>
+    )}*/
         <Box
             sx={{
             position: "relative",

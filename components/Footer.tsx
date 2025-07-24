@@ -6,7 +6,7 @@ import { Button, Box, Typography, ThemeProvider, Tooltip } from "@mui/material";
 
 export default function Footer() {
   return (
-    
+    /* esta bien pero si armas clases de ccs queda mas prolijo*/
     <Box
     sx={{
       display: "flex",
@@ -51,7 +51,7 @@ export default function Footer() {
         </a>
       </Button>
     </Box>
-    
+    {/*aca el año podria ser una variable q tome el año actual y lo muestre Para no tener q estar cambiando el año y haga solo*/}
     <Typography variant="body1" sx={{ color: "#333" }}>
       2025 © Todos los derechos reservados
     </Typography>
