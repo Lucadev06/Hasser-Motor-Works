@@ -27,8 +27,7 @@ export default function Header() {
         justifyContent: "left",
         height: "4rem",
         color: "white",
-        marginLeft: "2rem",
-        marginTop: "1rem",
+        marginLeft: "2rem"
       }}
     >
   
@@ -54,6 +53,7 @@ export default function Header() {
             width: "100%",
             height: "100%",
             objectFit: "cover",
+            marginTop: "0.3rem",
           }}
         />
       </Box>
