@@ -121,7 +121,7 @@ export default function Home() {
         >
           {/* Lista de servicios */}
           <Box sx={{ flex: 1 }}>
-            <ul>
+            <ul style={{ listStyle: "none"}}>
               {servicios.map((servicio, index) => (
                 <li
                   key={index}
@@ -134,7 +134,6 @@ export default function Home() {
                     sx={{
                       color: "black",
                       fontSize: "2rem",
-
                     }}
                     onClick={() => handleRedirectSection(servicio.titulo)}
                   >
