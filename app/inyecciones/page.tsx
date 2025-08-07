@@ -1,16 +1,11 @@
 import React from 'react'
-import Header from '@/components/Header'
+import Header from '@/components/headers/Header'
 import { Box, Typography } from '@mui/material'
 import Footer from '@/components/Footer'
 import ReactImageGallery from '@/components/ImagesGallery'
+import { inyeccionesImages } from '../utils/imagesData'
 
 export default function page() {
-    const inyeccionesImages = [
-        { src:"/images/inyeccion-07.jpeg", text: "Inyección electrónica Alfa Romeo Montreal" },
-        { src:"/images/inyeccion-09.jpeg", text: "Inyección electrónica Mercedes Benz W124" },
-        { src: "/images/inyeccion-03.jpeg", text: "Inyección programable Mercedes Benz M103"},
-        { src:"/images/inyeccion-14.jpeg", text: "Cableado a medida" },   
-    ];
 
     return (
         <>
