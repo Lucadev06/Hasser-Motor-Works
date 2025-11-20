@@ -22,11 +22,12 @@ export const swapsImages = [
 ];
 
 export const inyeccionesImages = [
-    { src: "/images/restauracion-05.jpeg", text: "Puesta en valor Motor M103" },
-    { src: "/images/restauracion-04.jpeg", text: "Restauración completa interior W201" },
-    { src: "/images/restauracion-06.jpeg", text: "Restauración parlantes W163" },
-    { src: "/images/restauracion-08.jpeg", text: "Restauración pintura de tapas" },
+    { src:"/images/inyeccion-07.jpeg", text: "Inyección electrónica Alfa Romeo Montreal" },
+    { src:"/images/inyeccion-09.jpeg", text: "Inyección electrónica Mercedes Benz W124" },
+    { src: "/images/inyeccion-03.jpeg", text: "Inyección programable Mercedes Benz M103"},
+    { src:"/images/inyeccion-14.jpeg", text: "Cableado a medida" },   
 ];
+
 
 export const modificacionesImages = [
     { src: "/images/modificacion-04.jpeg", text: "Conductos de admisión M112" },
